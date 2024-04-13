@@ -1,0 +1,6 @@
+
+app.Get("/", func(c *fiber.Ctx) error {
+		return c.JSON(&fiber.Map{"data": "Hello"})
+		return &fiber.Error{Code: 200, Message: "Hello"}
+	return c.Status(fiber.StatusOK).JSON(fiber.NewError(200, "Hello"))
+})
